@@ -57,8 +57,21 @@ but unfortunately model was underfitting the accuracy was very low on test data 
 
 second approach
 using opencv I have applied some filter on the image to convert it i a format that can be reached easily by tesseract and then pass them to tesseract and applied regex for extracting date data from the raw text and the output is saved into excel file with two column ( image_name and image_date )
-total date captured is 381 out of 590 images Accuracy = 65%
-Request: POST /extract_date
-Payload: {“base_64_image_content”: <base_64_image_content>}
-Response: If date is present: {“date”: “YYYY-MM-DD”} If date is not present: {“date”: "null"}
+total date captured is 381 out of 590 images '
+
+Accuracy = 65%
+
+
+Request:
+POST /extract_date
+
+Payload:
+{“base_64_image_content”: <base_64_image_content>}
+
+Response:
+If date is present:
+{“date”: “YYYY-MM-DD”}
+If date is not present:
+{“date”: null}
+
 
